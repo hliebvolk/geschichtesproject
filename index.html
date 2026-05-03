@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwei Deutschlands – Erziehung & Schule</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ddr-red: #cc0000;
+            --brd-blue: #004477;
+            --accent: #f39c12;
+            --bg-light: #fdfdfd;
+            --text-dark: #1a1a1a;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 8%; box-sizing: border-box;
+            z-index: 2000; transition: var(--transition);
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-weight: 900; font-size: 1.4rem; color: white; letter-spacing: -1px; }
+        nav.scrolled .logo { color: var(--text-dark); }
+
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a {
+            text-decoration: none; color: white;
+            font-weight: 600; font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        nav.scrolled .nav-links a { color: var(--text-dark); }
+
+        /* Hero */
+        .hero {
+            height: 80vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1599408162449-36876790089f?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: white; text-align: center;
+        }
+
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; font-weight: 900; }
+
+        /* Content Sections */
+        .container { max-width: 1000px; margin: auto; padding: 100px 20px; }
+
+        .section-intro { background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); margin-top: -100px; position: relative; }
+        
+        h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 30px; border-bottom: 4px solid var(--accent); display: inline-block; }
+        h3 { font-size: 1.8rem; margin-top: 40px; color: #444; }
+
+        .ddr-theme { color: var(--ddr-red); border-color: var(--ddr-red); }
+        .brd-theme { color: var(--brd-blue); border-color: var(--brd-blue); }
+
+        .highlight-box {
+            background: #f8f9fa; padding: 30px; border-left: 10px solid var(--accent);
+            border-radius: 10px; margin: 30px 0;
+        }
+
+        .quote { font-style: italic; font-size: 1.2rem; color: #555; border-left: 4px solid #ddd; padding-left: 20px; margin: 40px 0; }
+
+        /* Table */
+        .table-wrapper { margin: 60px 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #333; color: white; text-transform: uppercase; font-size: 0.8rem; }
+        tr:hover { background: #fdfdfd; }
+
+        footer { background: #000; color: #555; padding: 80px 20px; text-align: center; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<nav id="main-nav">
+    <div class="logo">GESCHICHTE.PROJEKT</div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#ddr">DDR</a>
+        <a href="#brd">BRD</a>
+        <a href="#vergleich">Vergleich</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div data-aos="fade-down">
+        <h1>Zwei Deutschlands – Zwei Wege</h1>
+        <p style="font-size: 1.4rem;">Erziehung und Schule im Systemvergleich</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="section-intro" data-aos="fade-up">
+        <h2>Bildung als Instrument</h2>
+        <p>Nach 1945 wurde Deutschland zu einem Schauplatz für zwei gegensätzliche gesellschaftliche Experimente. Während Politiker Grenzen zogen, prägten Lehrer und Erzieher auf beiden Seiten der Mauer den „Menschen der Zukunft“.</p>
+        <p>In der <strong>BRD</strong> sollte Bildung das Fundament der Demokratie stärken, während in der <strong>DDR</strong> die Schule als Schmiede für den Sozialismus diente. Erfahre hier, wie die Systeme den „mündigen Bürger“ im Westen und die „sozialistische Persönlichkeit“ im Osten formten.</p>
+    </section>
+
+    <section id="ddr" style="padding-top: 100px;">
+        <h2 class="ddr-theme" data-aos="fade-right">Die DDR: Weg zur sozialistischen Persönlichkeit</h2>
+        
+        <h3>Das Erziehungsideal</h3>
+        <p>Das Hauptziel war die Formung einer <strong>„allseitig entwickelten sozialistischen Persönlichkeit“</strong>. Absolventen sollten nicht nur Fachwissen besitzen, sondern loyal zur Staatsideologie (Marxismus-Leninismus) stehen und bereit sein, den Sozialismus zu verteidigen.</p>
+
+        <div class="highlight-box" data-aos="fade-left">
+            <h3>Die FDJ – Der einzige Weg</h3>
+            <p>In der DDR gab es keine Vielfalt. Die <strong>Freie Deutsche Jugend (FDJ)</strong> besaß ein Monopol:</p>
+            <ul>
+                <li><strong>Freizeitkontrolle:</strong> Präsenz in Discos bis hin zu Sportvereinen.</li>
+                <li><strong>Karrierefilter:</strong> Ohne FDJ-Mitgliedschaft gab es kaum Chancen auf Abitur oder Studium.</li>
+            </ul>
+        </div>
+
+        <h3>Bildung und Armee</h3>
+        <p>Um die Zulassung zum Abitur zu erhalten, wurde von jungen Männern oft eine schriftliche Verpflichtung verlangt, länger in der Nationalen Volksarmee (NVA) zu dienen (3 Jahre oder mehr).</p>
+        
+        <div class="quote" data-aos="zoom-in">
+            "Schüler wurden ins Direktorenzimmer gerufen, wo Offiziere und Lehrer psychischen Druck ausübten. Eine Verweigerung konnte das Ende der Bildungskarriere bedeuten." <br>
+            <small>— Aus den Erinnerungen von Joachim Gauck</small>
+        </div>
+    </section>
+
+    <section id="brd" style="padding-top: 100px;">
+        <h2 class="brd-theme" data-aos="fade-right">Die BRD: Zwischen Autoritarismus und Demokratie</h2>
+        
+        <h3>Das Erziehungsideal</h3>
+        <p>Im Westen war das Ziel die Erziehung zum <strong>„mündigen Bürger“</strong>. Der Mensch sollte lernen, kritisch zu denken, eigene Entscheidungen zu treffen und Verantwortung in einer demokratischen Gesellschaft zu übernehmen.</p>
+
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            <div data-aos="fade-up">
+                <h4>Erbe der Vergangenheit</h4>
+                <p>In den 50er/60er Jahren herrschte oft noch ein autoritärer Stil. Lehrer forderten Gehorsam, und soziale Barrieren waren hoch: Arbeiterkinder schafften seltener den Sprung aufs Gymnasium.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4>Aufbruch von 1968</h4>
+                <p>Gegen Ende der 60er protestierte die Jugend gegen den „muffigen Geist“. Sie forderten Mitbestimmung und Modernisierung, was zu großen Bildungsreformen führte.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vergleich" style="padding-top: 100px;">
+        <h2 data-aos="fade-up">Vergleichstabelle</h2>
+        <div class="table-wrapper" data-aos="zoom-in">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspekt</th>
+                        <th>DDR (Osten)</th>
+                        <th>BRD (Westen)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Hauptziel</strong></td><td>Sozialistische Persönlichkeit</td><td>Mündiger Bürger</td></tr>
+                    <tr><td><strong>Kollektiv</strong></td><td>Kollektiv vor Individuum</td><td>Individuelle Freiheit</td></tr>
+                    <tr><td><strong>Einfluss</strong></td><td>Direkt (staatlich)</td><td>Indirekt (Pluralismus)</td></tr>
+                    <tr><td><strong>Organisationen</strong></td><td>FDJ-Monopol</td><td>Vielfalt an Verbänden</td></tr>
+                    <tr><td><strong>Studium</strong></td><td>Politische Loyalität</td><td>Leistung & Herkunft</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section style="padding-top: 50px; padding-bottom: 100px;">
+        <h2 data-aos="fade-up">Freizeit & Kultur</h2>
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div data-aos="fade-right">
+                <p><strong>DDR:</strong> Die Führung fürchtete den West-Einfluss. Beat-Musik wurde als „Einfaltspinsel-Geheule“ (Walter Ulbricht) beschimpft. Man versuchte eine eigene „sozialistische Unterhaltung“ zu erzwingen.</p>
+            </div>
+            <div data-aos="fade-left">
+                <p><strong>BRD:</strong> Popkultur (Beatles, Elvis) wurde zum Werkzeug der Emanzipation. Junge Leute nutzten Musik, um sich von der konservativen Welt der Eltern abzugrenzen.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Schulprojekt Geschichte GE11 | Alle Texte basierend auf ALN-Materialien</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    window.onscroll = function() {
+        var nav = document.getElementById('main-nav');
+        if (window.pageYOffset > 100) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+    };
+</script>
+
+</body>
+</html>
